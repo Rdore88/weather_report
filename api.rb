@@ -25,4 +25,6 @@ case answer
     conditions = Weather.new.get_weather(zip_code)
     conditions_to_print = Formatter.new(conditions)
     puts conditions_to_print.print_conditions
+  else
+    puts "Instrunction not understood"
   end
