@@ -16,8 +16,13 @@ class Weather
     HTTParty.get('http://api.wunderground.com/api/a0fad745509bd909/forecast10day/settings/q/20011.json')
   end
 
-  def current_alerts
-    HTTParty.get('http://api.wunderground.com/api/a0fad745509bd909/alerts/settings/q/20011.json')
+  def current_alerts(zip_code)
+    HTTParty.get("http://api.wunderground.com/api/a0fad745509bd909/alerts/settings/q/#{zip_code}.json")
+  end
+
+  def multiple_alerts
+    
+
   end
 
 end
