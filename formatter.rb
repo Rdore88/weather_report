@@ -34,4 +34,9 @@ class Formatter
     return "Sunrise is at #{sunrise_hour}:#{sunrise_minute} and the sun will set at #{sunset_hour}:#{sunset_minute}"
   end
 
+  def print_forecast
+    forecast = @weather_object["forecast"]["txt_forecast"]["forecastday"].map { |el| {el["title"] => el["fcttext"]}}
+    return forecast
+  end
+
 end

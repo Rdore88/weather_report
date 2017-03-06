@@ -16,6 +16,7 @@ case answer
   when "10 day forecast"
     forecast = Weather.new.ten_day_forecast(zip_code)
     forecast_to_print = Formatter.new(forecast)
+    puts forecast_to_print.print_forecast
   when "sunrise", "sunset"
     astronomy = Weather.new.sunrise_sunset(zip_code)
     astronomy_to_print = Formatter.new(astronomy)
